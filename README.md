@@ -7,5 +7,5 @@ This project is flutter Demo for kind of StarBucks application.
   
   
 $ flutter create <ProjectName>
-  - Then put these file into this project and run this from project directory
+  - Then put these file into this project and run this from project directory.
 $ flutter run
