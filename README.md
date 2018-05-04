@@ -6,6 +6,7 @@ This project is flutter Demo for kind of StarBucks application.
 # Then , use these commands line parameter
   
   
-$ flutter create <ProjectName>
+# $ flutter create <ProjectName>
   - Then put these file into this project and run this from project directory.
-$ flutter run
+
+# $ flutter run
