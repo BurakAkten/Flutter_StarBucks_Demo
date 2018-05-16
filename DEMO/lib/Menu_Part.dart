@@ -24,16 +24,12 @@ class _Menu_Part extends State<Menu_Part>{
   Widget build(BuildContext context) {
     var _Textcolor = Colors.grey;
     return new Drawer(
-
-
       child: new Container(
         color: Colors.black12,
         child: new ListView(
-
           children: <Widget>[
             new Padding(padding: EdgeInsets.only(top: 12.0)),
             new ListTile(
-
               title: new Text("BURAK" , style: new TextStyle(color: _Textcolor),),
               subtitle: new Text("Account & Setting" , style: new TextStyle(color: _Textcolor),),
               leading: _hero,
@@ -41,7 +37,6 @@ class _Menu_Part extends State<Menu_Part>{
                 //Navigator.pop(context);
                 Navigator.of(context).push(new MaterialPageRoute(builder: (context) => new Account_Settings()));
               },
-
             ),
             new ListTile(
               title: new Text("My Account" , style: new TextStyle(color: _Textcolor),),

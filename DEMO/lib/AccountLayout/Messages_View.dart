@@ -60,23 +60,29 @@ class _Messages_View extends State<Messages_View>{
       color: Colors.cyan,
       child: new Scaffold(
         appBar: new AppBar(
-          title: new Text("Messages" , style: new TextStyle(fontWeight: FontWeight.bold , color: Colors.white),),
-          iconTheme: new IconThemeData(color: Colors.white , size: 3.0),
-          backgroundColor: Colors.black45,
+          title: new Text("Messages" , style: new TextStyle(fontWeight: FontWeight.bold , color: Colors.black45),),
+          iconTheme: new IconThemeData(color: Colors.black45 , size: 3.0),
+          backgroundColor: Colors.grey[300],
         ),
+        backgroundColor: Colors.grey[300],
         body: new Container(
           child: new Center(
             child: ListView.builder(
               itemCount: widget._messages.length,
               padding: EdgeInsets.only(bottom: 2.0),
               itemBuilder: (context, index) {
-                return new ListTile(
-                  onTap:() => handleTap(index),//every item tap controller
-                  onLongPress: () => _showAlertDialog(index),
-                  title: new Text('${widget._messages[index].getMessage()}' ,
-                    style: !widget._messages[index].isRead() ?
-                    new TextStyle(fontWeight: FontWeight.bold) :
-                    new TextStyle(fontWeight: FontWeight.normal),
+                return new Container(
+                  color: Colors.white,
+                  child: new ListTile(
+                    onTap:() => handleTap(index),//every item tap controller
+                    trailing: new Icon(Icons.chevron_right),
+                    leading: new Image.asset("images/Starbucks_Corporation.png"),
+                    onLongPress: () => _showAlertDialog(index),
+                    title: new Text('${widget._messages[index].getMessage()}' ,
+                      style: !widget._messages[index].isRead() ?
+                      new TextStyle(fontWeight: FontWeight.bold) :
+                      new TextStyle(fontWeight: FontWeight.normal),
+                    ),
                   ),
                 );
               },),

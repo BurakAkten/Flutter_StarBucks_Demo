@@ -6,19 +6,13 @@ class Payment_Part extends StatefulWidget{
   State createState() => new _Payment_Part();
 }
 
-
-
-
-
 class _Payment_Part extends State<Payment_Part>{
 
   int _balance = 0;
-
   @override
   void initState() {
     super.initState();
     _balance = 0;
-
   }
    void handleTab(){//must change
       this.setState(() {
@@ -26,10 +20,8 @@ class _Payment_Part extends State<Payment_Part>{
       });
    }
 
-
   @override
   Widget build(BuildContext context) {
-
     return new Expanded(
         child : new InkWell(
           onTap: () => handleTab(),
@@ -48,7 +40,6 @@ class _Payment_Part extends State<Payment_Part>{
                 ),
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     new Container(
                       padding: EdgeInsets.only(left: 43.0),
@@ -56,7 +47,6 @@ class _Payment_Part extends State<Payment_Part>{
                     ),
                     new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         //new Padding(padding: EdgeInsets.only(left: 54.0)),
                         new Text("BALANCE  " , style: new TextStyle(color: Colors.white  , fontSize: 19.0 , fontWeight: FontWeight.w100),),

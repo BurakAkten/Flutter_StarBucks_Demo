@@ -13,14 +13,12 @@ class Message_Part extends StatefulWidget{
 
 class _Message_Part extends State<Message_Part>{
 
-  List<Message> _messages = new List<Message>();//create a class that hold messages and info about read or not
+  List<Message> _messages = new List<Message>();
   String _message;
   int _index = 0;
 
-
-
   @override
-  void initState() {//will be change
+  void initState() {//could be change
     _messages.add(new Message("This is first message."));
     _messages.add(new Message("This is second message."));
     _messages.add(new Message("This is third message."));
@@ -43,7 +41,6 @@ class _Message_Part extends State<Message_Part>{
           break;
         }
       }
-
       _message = i == _messages.length ? "No Recent Messages" : _message;
     });
   }
@@ -65,7 +62,8 @@ class _Message_Part extends State<Message_Part>{
             child: new Container(
               padding: EdgeInsets.only(top:35.0 , bottom: 35.0, left: 45.0,right: 45.0),
               child: new Center(
-                child: new Text ("MESSAGES" , style: new TextStyle(color: Colors.white , fontSize: 18.0 , fontWeight: FontWeight.bold),),
+                child: new Text ("MESSAGES" ,
+                  style: new TextStyle(color: Colors.white , fontSize: 18.0 , fontWeight: FontWeight.bold),),
               ),
             ),
           ),

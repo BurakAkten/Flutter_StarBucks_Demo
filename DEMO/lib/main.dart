@@ -52,10 +52,8 @@ void main(){
     print(e.toString());
     return;
   }
-
     /*MapView.setApiKey(API_KEY);
     runApp(new MyApp());*/
-
 }
 
 
