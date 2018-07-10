@@ -9,6 +9,7 @@ class Payment_Part extends StatefulWidget{
 class _Payment_Part extends State<Payment_Part>{
 
   int _balance = 0;
+
   @override
   void initState() {
     super.initState();

@@ -11,8 +11,8 @@ class Menu_Part extends StatefulWidget{
 }
 
 class _Menu_Part extends State<Menu_Part>{
-  var _hero = new Hero(
 
+  var _hero = new Hero(
       tag: 'Account_settings',
       child:new CircleAvatar(
         radius: 20.0,
@@ -23,7 +23,9 @@ class _Menu_Part extends State<Menu_Part>{
   @override
   Widget build(BuildContext context) {
     var _Textcolor = Colors.grey;
+
     return new Drawer(
+
       child: new Container(
         color: Colors.black12,
         child: new ListView(

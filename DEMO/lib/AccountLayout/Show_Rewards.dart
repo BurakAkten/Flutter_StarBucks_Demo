@@ -14,16 +14,16 @@ class Show_Rewards extends StatelessWidget{
         child: Column(
           children: <Widget>[
             new Expanded(
-              child:new Text("REWARDS" , style: new TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 22.0),),
+              child:new Text("REWARDS" , style: new TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 20.0),),
             ),
             new Expanded(
-              child:new Text("Your Rewards" , style: new TextStyle(color: Colors.grey , fontSize: 18.0 ),),
+              child:new Text("Your Rewards" , style: new TextStyle(color: Colors.grey , fontSize: 16.0 ),),
             ),
             new Expanded(
-              child: new Text("$_rewards" , style: new TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 22.0),),
+              child: new Text("$_rewards" , style: new TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 20.0),),
             ),
             new Expanded(
-              child:new Text("PIECE(S)" , style: new TextStyle(color: Colors.grey , fontSize: 18.0),),
+              child:new Text("PIECE(S)" , style: new TextStyle(color: Colors.grey , fontSize: 16.0),),
             ),
           ],
         ) ,

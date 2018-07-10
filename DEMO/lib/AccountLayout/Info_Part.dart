@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class Info_Part extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

@@ -35,13 +35,14 @@ void main(){
 
 import 'package:flutter/material.dart';
 import './AccountLayout/Account_Layout.dart';
-import 'package:map_view/map_view.dart';
+/*import 'package:map_view/map_view.dart';
 import 'dart:async';
-
+*/
+/*
 var API_KEY = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; //static
 var API_KEY2 = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; // IOS
 var API_KEY3 = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; // Android
-
+*/
 
 
 void main(){
@@ -71,6 +72,7 @@ void main(){
 }
 
 /*
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => new _MyAppState();
@@ -84,16 +86,16 @@ class _MyAppState extends State<MyApp> {
   Uri staticMapUri;
 
   List<Marker> _markers = <Marker>[
-    new Marker("1", "Work", 41.015137, 28.979530, color: Colors.blue),
-    new Marker("2", "Nossa Familia Coffee", 41.015137, 28.979530),
+    new Marker("1", "İstanbul", 41.015137, 28.979530, color: Colors.blue),
+    new Marker("2", "Kocaeli", 40.853270, 29.881520),
   ];
 
   @override
   initState() {
     super.initState();
-    cameraPosition = new CameraPosition(new Location(45.5259467, 28.979530), 2.0);
-    staticMapUri = staticMapProvider.getStaticUri(new Location(45.5259467, 28.979530), 12,
-        width: 900, height: 400, mapType: StaticMapViewType.roadmap);
+    cameraPosition = new CameraPosition(new Location(39.0, 35.0), 2.0);
+    staticMapUri = staticMapProvider.getStaticUri(new Location(39.0, 35.0), 12,
+        width: 900, height: 900, mapType: StaticMapViewType.roadmap);
   }
 
   @override
@@ -123,11 +125,12 @@ class _MyAppState extends State<MyApp> {
                           ),
                           padding: const EdgeInsets.all(20.0),
                         )),
-                    new InkWell(
+                    new Container(
                       child: new Center(
-                        child: new Image.network(staticMapUri.toString()),
+                        //child: new Image.network(staticMapUri.toString()),
+                        child: showMap(),
                       ),
-                      onTap: showMap,
+                      //onTap: showMap,
                     )
                   ],
                 ),
@@ -150,19 +153,19 @@ class _MyAppState extends State<MyApp> {
   }
 
   showMap() {
-    mapView.show(
+    var x = mapView.show(
         new MapOptions(
             mapViewType: MapViewType.normal,
-            showUserLocation: true,
+            showUserLocation: false,
             initialCameraPosition: new CameraPosition(
-                new Location(41.015137, 28.979530), 14.0),
+                Location(45.512287, -122.645913), 18.0),
             title: "Recently Visited"),
         toolbarActions: [new ToolbarAction("Close", 1)]);
 
     var sub = mapView.onMapReady.listen((_) {
       mapView.setMarkers(_markers);
-      mapView.addMarker(new Marker("3", "10 Barrel", 45.5259467, -122.687747,
-          color: Colors.purple));
+      /*mapView.addMarker(new Marker("3", "10 Barrel", 45.5259467, -122.687747,
+          color: Colors.purple));*/
       mapView.zoomToFit(padding: 100);
     });
     compositeSubscription.add(sub);
@@ -194,6 +197,7 @@ class _MyAppState extends State<MyApp> {
       print("Info Window Tapped for ${marker.title}");
     });
     compositeSubscription.add(sub);
+    return x;
   }
 
   _handleDismiss() async {
@@ -241,4 +245,5 @@ class CompositeSubscription {
     return this._subscriptions.toList();
   }
 }
+
 */

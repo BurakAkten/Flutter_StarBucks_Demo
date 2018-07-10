@@ -59,7 +59,7 @@ class _Account_Settings extends State<Account_Settings>{
             child: new Column(
               children: <Widget>[
                 new Text("BURAK" , style: new TextStyle(fontWeight: FontWeight.bold , color: Colors.black , fontSize: 18.0),),
-                new Text("burak_akten@hotmail.com" , style: new TextStyle(color: Colors.grey),)
+                new Text("ba_ba@hotmail.com" , style: new TextStyle(color: Colors.grey),)
               ],
             ),
           ),

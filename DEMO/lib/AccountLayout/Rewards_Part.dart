@@ -11,13 +11,13 @@ class Rewards_Part extends StatefulWidget{
 }
 
 class _Rewards_Part extends State<Rewards_Part>{
-  int _rewards; //gonna be changed according to animation
-  int animation_count;
+  int _rewards;
+  double _animation_count;
 
   @override
   void initState() {
     _rewards = 0;
-    animation_count = 0;
+    _animation_count = 4.0; //must taken from the beginning of the app.
     super.initState();
   }
 
@@ -25,6 +25,12 @@ class _Rewards_Part extends State<Rewards_Part>{
     this.setState((){
       _rewards++;
     });
+  }
+
+
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
   }
 
   @override
@@ -37,7 +43,7 @@ class _Rewards_Part extends State<Rewards_Part>{
             child: new Center(
                 child: new Row(
                   children: <Widget>[
-                    new Reward_Animation(animation_count),
+                    new Expanded(child: new Reward_Animation(_animation_count),),
                     new Show_Rewards(_rewards),
                   ],
                 ),
