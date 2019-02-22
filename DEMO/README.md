@@ -1,6 +1,7 @@
 # tutorial_part1
 
-A new Flutter application.
+This application made with Flutter. 
+This application aim to practise with Flutter and Dart Language.
 
 ## Getting Started
 
