@@ -1,4 +1,4 @@
-# Flutter_Starucks_Demo
+# Flutter_StarBucks_Demo
 
 This project is flutter Demo for kind of StarBucks application.
 
