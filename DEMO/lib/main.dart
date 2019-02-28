@@ -38,11 +38,7 @@ import './AccountLayout/Account_Layout.dart';
 /*import 'package:map_view/map_view.dart';
 import 'dart:async';
 */
-/*
-var API_KEY = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; //static
-var API_KEY2 = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; // IOS
-var API_KEY3 = "AIzaSyBM924OWOzABEN64IJaG3-C0fMhc5u7dY8"; // Android
-*/
+
 
 
 void main(){
