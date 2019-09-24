@@ -2,7 +2,6 @@ name: tutorial_part1
 description: A new Flutter application.
 
 dependencies:
-  map_view: "^0.0.12"
   flutter:
     sdk: flutter
 
