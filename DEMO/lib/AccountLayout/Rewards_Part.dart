@@ -16,8 +16,9 @@ class _Rewards_Part extends State<Rewards_Part>{
 
   @override
   void initState() {
-    _rewards = 0;
-    _animation_count = 4.0; //must taken from the beginning of the app.
+    
+    _animation_count = 42.0; //must taken from the beginning of the app.
+    _rewards =_animation_count ~/ 15;
     super.initState();
   }
 
@@ -43,7 +44,7 @@ class _Rewards_Part extends State<Rewards_Part>{
             child: new Center(
                 child: new Row(
                   children: <Widget>[
-                    new Expanded(child: new Reward_Animation(_animation_count),),
+                    new Expanded(child: new Reward_Animation(_animation_count % 15),),
                     new Show_Rewards(_rewards),
                   ],
                 ),
